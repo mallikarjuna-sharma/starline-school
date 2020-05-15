@@ -1,0 +1,47 @@
+{
+  "name": "trip-details",
+  "version": "1.0.0",
+  "description": "star-line-school",
+  "main": "index.js",
+  "scripts": {
+    "webpack-dev-server": "webpack-dev-server --open",
+    "dev": "webpack-dev-server --mode=development --open",
+    "prod": "webpack --mode=production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mallikarjuna-sharma/starline-school.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mallikarjuna-sharma/starline-school/issues"
+  },
+  "homepage": "https://github.com/mallikarjuna-sharma/starline-school#readme",
+  "dependencies": {
+    "@material-ui/core": "^4.9.14",
+    "@material-ui/icons": "^4.9.1",
+    "@material-ui/lab": "^4.0.0-alpha.53",
+    "@material-ui/styles": "^4.9.14",
+    "css-loader": "^3.5.3",
+    "file-loader": "^6.0.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-google-maps": "^9.4.5",
+    "react-router-dom": "^5.2.0",
+    "style-loader": "^1.2.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/preset-env": "^7.9.6",
+    "@babel/preset-react": "^7.9.4",
+    "babel-loader": "^8.1.0",
+    "html-webpack-plugin": "^4.3.0",
+    "path": "^0.12.7",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
