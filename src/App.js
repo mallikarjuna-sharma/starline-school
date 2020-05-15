@@ -6,7 +6,7 @@ import { Typography, Grid, Paper } from "@material-ui/core";
 function App(){
     return (
         <Typography>
-        Website Devlopment in Progress
+        Website Devlopment in Progress waiting for godaddy
         </Typography>
     )
 }
