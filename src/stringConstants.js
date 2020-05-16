@@ -1,4 +1,5 @@
 const stringConstants = {
+    APP_COLOR:"#499F56",
     DISTANCE_RADIO: [
         {
             id: 1,
