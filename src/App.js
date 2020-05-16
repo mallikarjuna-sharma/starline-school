@@ -27,7 +27,7 @@ function App(){
     const classes = useStyles();
     return (
 
-        <AppBar position="static" color="default" style={{backgroundColor: "white" }} >
+        <AppBar position="static" color="default" style={{backgroundColor: "white",height: "80px"}} >
         <Toolbar style={{padding:0}} >
           {/* <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
             <MenuIcon />
