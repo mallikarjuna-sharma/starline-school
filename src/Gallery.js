@@ -36,7 +36,7 @@ function Gallery(){
        <div className="slide-container">
         <Zoom {...zoomOutProperties}>
           {
-            images.map((each, index) => <img key={index} style={{width: "100%",height:"100%"}} src={each} />)
+            images.map((each, index) => <img key={index} style={{width: "100%",height:"400px"}} src={each} />)
           }
         </Zoom>
       </div>
