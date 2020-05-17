@@ -28,8 +28,8 @@ function AboutUsCard() {
       </Grid>
 
       <Grid item md={12} lg={12}>
-        <Grid container justify="center" alignContent="center" justify="center" spacing={3} >
-          <Grid item md={11} lg={4}>
+        <Grid container justify="center" alignContent="center" justify="center" spacing={8} >
+          <Grid item md={11} lg={6}>
             <Paper elevation={2} style={{padding:"2%",minHeight:"100%"}}>
               <Grid container spacing={8} direction="column" alignContent="center" justify="center" style={{width:"100%"}}>
                 <Grid item alignItems="center" md={12} lg={12}>
@@ -48,7 +48,7 @@ function AboutUsCard() {
               </Grid>
             </Paper>
           </Grid>
-          <Grid item md={11} lg={4}>
+          <Grid item md={11} lg={6}>
           <Paper elevation={2} style={{padding:"2%",minHeight:"100%"}}>
               <Grid container  spacing={4} direction="column" alignContent="center" justify="center">
                 <Grid item>
@@ -67,9 +67,12 @@ function AboutUsCard() {
               </Grid>
             </Paper >
           </Grid>
-          <Grid item md={11} lg={4}>
+          <Grid item md={11} lg={12}>
           <Paper elevation={2} style={{padding:"2%",minHeight:"100%"}}>
-              <Grid container spacing={4} direction="column" alignContent="center" justify="center">
+              <Grid container spacing={4} direction="row" alignContent="center" justify="center">
+
+                <Grid item>
+
                 <Grid item md={12} lg={12}>
                 <Card raised  style={CardStyles}> <img  src={Principal}  style={ImgStyle}/></Card>
                 </Grid>
@@ -83,6 +86,10 @@ function AboutUsCard() {
                       Principal
                     </Typography>
                 </Grid>
+               
+                </Grid>
+
+                <Grid item>
                 <Grid item md={12} lg={12}>
                 <Card raised  style={CardStyles}> <img  src={VicePrincipal}  style={ImgStyle}/></Card>
                 </Grid>
@@ -96,7 +103,10 @@ function AboutUsCard() {
                       Vice Principal
                     </Typography>
                 </Grid>
-                <Grid item>
+                 </Grid>
+
+                 <Grid item>
+                <Grid item md={12} lg={12}>
                 <Card raised  style={CardStyles}> <img  src={FacultyAdminstrator}  style={ImgStyle}/></Card>
                 </Grid>
                 <Grid item style={{textAlign:"center"}}>
@@ -109,6 +119,8 @@ function AboutUsCard() {
                     Faculty Adminstrator
                     </Typography>
                 </Grid>
+                </Grid>
+
               </Grid>
             </Paper>
           </Grid>
