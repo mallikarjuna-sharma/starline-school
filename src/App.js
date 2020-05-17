@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
   },
   appBar:{
     backgroundColor: "white",
-    height: "15vh" ,
+    height: "18vh" ,
     [theme.breakpoints.down('md')]: {
       height: "5%" 
     },

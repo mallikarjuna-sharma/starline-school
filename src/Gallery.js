@@ -33,7 +33,7 @@ function Gallery() {
           {images.map((each, index) => (
             <img
               key={index}
-              style={{ width: "100%", height: "85vh" }}
+              style={{ width: "95%", height: "82vh" ,paddingLeft:"2%"}}
               src={each}
             />
           ))}
