@@ -14,7 +14,7 @@ const ImgStyle = {
   height: "100%",
 };
 
-const CardStyles = { marginLeft: "35%", width: "150px", height: "200px" };
+const CardStyles = { width: "150px", height: "200px" };
 
 function AboutUsCard() {
   return (
@@ -45,9 +45,11 @@ function AboutUsCard() {
                 style={{ width: "100%" }}
               >
                 <Grid item alignItems="center" md={12} lg={12}>
+                <Grid container justify="center" >
                   <Card raised style={CardStyles}>
                     <img src={Chairman} style={ImgStyle} />
                   </Card>
+                  </Grid>
                 </Grid>
                 <Grid
                   item
@@ -84,10 +86,11 @@ function AboutUsCard() {
                 justify="center"
               >
                 <Grid item>
+                <Grid container justify="center" >
                   <Card raised style={CardStyles}>
-                    {" "}
                     <img src={Secretary} style={ImgStyle} />
                   </Card>
+                  </Grid>
                 </Grid>
                 <Grid item style={{ textAlign: "center" }}>
                   <Typography variant={"h5"}>
@@ -114,10 +117,12 @@ function AboutUsCard() {
                 <Grid item>
                   <Grid container spacing={1} direction="column">
                     <Grid item md={12} lg={12}>
+                    <Grid container justify="center" >
                       <Card raised style={CardStyles}>
                         {" "}
                         <img src={Principal} style={ImgStyle} />
                       </Card>
+                      </Grid>
                     </Grid>
                     <Grid item md={12} lg={12} style={{ textAlign: "center" }}>
                       <Typography variant={"h5"}>
@@ -133,10 +138,12 @@ function AboutUsCard() {
                 <Grid item>
                   <Grid container spacing={1} direction="column">
                     <Grid item md={12} lg={12}>
+                    <Grid container justify="center" >
                       <Card raised style={CardStyles}>
                         {" "}
                         <img src={VicePrincipal} style={ImgStyle} />
                       </Card>
+                      </Grid>
                     </Grid>
                     <Grid item style={{ textAlign: "center" }}>
                       <Typography variant={"h5"}>
@@ -152,10 +159,12 @@ function AboutUsCard() {
                 <Grid item>
                   <Grid container spacing={1} direction="column">
                     <Grid item md={12} lg={12}>
+                    <Grid container justify="center" >
                       <Card raised style={CardStyles}>
                         {" "}
                         <img src={FacultyAdminstrator} style={ImgStyle} />
                       </Card>
+                      </Grid>
                     </Grid>
                     <Grid item style={{ textAlign: "center" }}>
                       <Typography variant={"h5"}>Mrs.L.Chandra,B.Sc</Typography>
