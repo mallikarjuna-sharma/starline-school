@@ -105,15 +105,17 @@ function Facilities() {
         //   icon={<SchoolIcon />}
         >
           <h3 className="vertical-timeline-element-title">Salient Aspects</h3><br/>
-          <h4 className="vertical-timeline-element-subtitle"><StarIcon style={StarStyle}/>Perfect School Ambience</h4><br/>
-          <h4 className="vertical-timeline-element-subtitle"><StarIcon style={StarStyle}/>Seasoned Facilities</h4><br/>
-          <h4 className="vertical-timeline-element-subtitle"><StarIcon style={StarStyle}/>Impetus on Entrance Exam</h4><br/>
-          <h4 className="vertical-timeline-element-subtitle"><StarIcon style={StarStyle}/>Excemplary Facilities  </h4><br/>
-          <h4 className="vertical-timeline-element-subtitle"><StarIcon style={StarStyle}/>Tailor-made care  </h4><br/>
-          <h4 className="vertical-timeline-element-subtitle"><StarIcon style={StarStyle}/>Ultra-modern labs  </h4><br/>
-          <h4 className="vertical-timeline-element-subtitle"><StarIcon style={StarStyle}/>Student Centered learning  </h4><br/>
-          <h4 className="vertical-timeline-element-subtitle"><StarIcon style={StarStyle}/>Attitude & Counselling programe </h4><br/>
-          <h4 className="vertical-timeline-element-subtitle"><StarIcon style={StarStyle}/>Clubs & forums </h4><br/>
+          <h4 className="vertical-timeline-element-subtitle"><StarIcon style={StarStyle}/>Healthy and Hygienic Environment</h4><br/>
+          <h4 className="vertical-timeline-element-subtitle"><StarIcon style={StarStyle}/>Education with a Mother's Touch</h4><br/>
+          <h4 className="vertical-timeline-element-subtitle"><StarIcon style={StarStyle}/>Highly Qualified,experienced and dedicated faculty members</h4><br/>
+          <h4 className="vertical-timeline-element-subtitle"><StarIcon style={StarStyle}/>Smart class facility & Air Conditioned Class Rooms for Pre-Kg </h4><br/>
+          <h4 className="vertical-timeline-element-subtitle"><StarIcon style={StarStyle}/>For each age group of students,according to their mental age the right education is given </h4><br/>
+          <h4 className="vertical-timeline-element-subtitle"><StarIcon style={StarStyle}/>Continous assesment and reporting the parents regarding academic performance and rates of improvement </h4><br/>
+          <h4 className="vertical-timeline-element-subtitle"><StarIcon style={StarStyle}/>Well developed sports facility </h4><br/>
+          <h4 className="vertical-timeline-element-subtitle"><StarIcon style={StarStyle}/>Co-curricular activities like Karate,Yoga,Music,Dance,Art and Craft etc</h4><br/>
+          <h4 className="vertical-timeline-element-subtitle"><StarIcon style={StarStyle}/>Personal care and attention given by Cctv surveillance</h4><br/>
+          <h4 className="vertical-timeline-element-subtitle"><StarIcon style={StarStyle}/>We provide van facility for all destinations at very low cost</h4><br/>
+
           {/* <p>Strategy, Social Media</p> */}
         </VerticalTimelineElement>
       </VerticalTimeline>
