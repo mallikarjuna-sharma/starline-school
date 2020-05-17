@@ -17,7 +17,7 @@ const iconStyle = { background: stringConstants.APP_COLOR, color: "#fff" }
 
 function Facilities() {
   return (
-    <Grid container justify="center" spacing={4}>
+    <Grid container justify="center" spacing={4} style={{marginTop:"2%"}}>
 
     <Grid item>
     <Typography variant="h3" style={{"fontFamily":"Ikaros","fontSize":"72px","background":"-webkit-linear-gradient(#eee,rgb(99, 218, 77) )","WebkitBackgroundClip":"text","WebkitTextFillColor":"transparent","filter":"drop-shadow(2px 2px rgb(66, 187, 84))"}}>

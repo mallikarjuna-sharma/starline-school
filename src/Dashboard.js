@@ -25,7 +25,7 @@ function Dashboard() {
   const classes = useStyles();
 
   return (
-    <Grid container justify="center" direction="column" spacing={2}>
+    <Grid container justify="center" direction="column" spacing={6}>
 
       <Grid item md={12} lg={12} className={classes.gallery} >
         <Gallery />

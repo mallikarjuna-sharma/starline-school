@@ -16,11 +16,11 @@ const ImgStyle = {
   height:"100%",
 }
 
-const CardStyles = {marginLeft:"25%",width:"35%",height:"200px"}
+const CardStyles = {marginLeft:"25%",width:"45%",height:"200px"}
 
 function AboutUsCard() {
   return (
-    <Grid container justify="center" spacing={4}>
+    <Grid container justify="center" spacing={4} style={{marginTop:"2%"}}>
       <Grid item>
         <Typography variant="h3" style={ stringConstants.HEADER_STYLE }>
           About Us
