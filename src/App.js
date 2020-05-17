@@ -5,7 +5,7 @@ import Button from "@material-ui/core/Button";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import Toolbar from "@material-ui/core/Toolbar";
-import Logo from "./assests/logo.jpg";
+import Logo from "./assests/StarLionSchoolLogo.jpg";
 import "./App.css";
 import Dashboard from './Dashboard'
 
@@ -19,16 +19,24 @@ const useStyles = makeStyles((theme) => ({
   title: {
     flexGrow: 1,
   },
+  appBar:{
+    backgroundColor: "white",
+    height: "15vh" ,
+    [theme.breakpoints.down('md')]: {
+      height: "5%" 
+    },
+  }
 }));
 
 function App() {
   const classes = useStyles();
   return (
     <React.Fragment>
+    {/* <AppBar position="fixed" color="inherit" className={classes.appBar}> */}
     <AppBar
-      position="static"
-      color="default"
-      style={{ backgroundColor: "white", height: "80px" }}
+      position="fixed"
+      color="inherit"
+      className={classes.appBar}
     >
       <Toolbar style={{ padding: 0 }}>
         {/* <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">

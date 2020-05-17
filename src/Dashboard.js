@@ -1,23 +1,43 @@
 import React from "react";
 import { Typography, Grid, Paper } from "@material-ui/core";
 import stringConstants from "./stringConstants.js";
-import AboutUs from './AboutUs';
 import Gallery from './Gallery';
+import AboutUsCard from './AboutUsCard';
+import { makeStyles } from "@material-ui/core/styles";
+import Facilities from './Facilities';
 
+
+const useStyles = makeStyles((theme) => ({
+  
+  gallery:{
+    padding:0,
+    margin:0,
+    height:"85vh",
+    marginTop:"15vh",
+    [theme.breakpoints.down('md')]: {
+      height:"90%",
+      marginTop:"0vh",
+    },
+  }
+}));
 
 function Dashboard() {
+  const classes = useStyles();
+
   return (
     <Grid container justify="center" direction="column" spacing={2}>
 
-      <Grid item md={12} lg={12} style={{padding:0,margin:0}} >
+      <Grid item md={12} lg={12} className={classes.gallery} >
         <Gallery />
       </Grid>
 
       <Grid item md={12} lg={12} >
-        <AboutUs />
+        <AboutUsCard/>
       </Grid>
 
-    
+      <Grid item md={12} lg={12} >
+        <Facilities/>
+      </Grid>
      
     </Grid>
   );
