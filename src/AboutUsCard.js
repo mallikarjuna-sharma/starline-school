@@ -18,6 +18,7 @@ const CardStyles = { marginLeft: "35%", width: "150px", height: "200px" };
 
 function AboutUsCard() {
   return (
+    <div id='about_star_lion'>
     <Grid container justify="center" spacing={4} style={{ marginTop: "2%" }}>
       <Grid item>
         <Typography variant="h3" style={stringConstants.HEADER_STYLE}>
@@ -172,6 +173,7 @@ function AboutUsCard() {
         </Grid>
       </Grid>
     </Grid>
+    </div>
   );
 }
 

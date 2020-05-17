@@ -19,11 +19,11 @@ const useStyles = makeStyles((theme) => ({
   },
   appBar: {
     // paddingLeft:"25%",
+    boxShadow: "none",
     backgroundColor: "white",
     height: "10vh",
     [theme.breakpoints.down("md")]: {
       height: "5%",
-
     },
   },
 }));
@@ -44,24 +44,19 @@ function App() {
 
       <AppBar position="sticky" color="inherit" className={classes.appBar}>
         <Toolbar style={{ padding: 0 }}>
-
-
-
-       
-
           <Grid container justify="center" spacing={8}>
-            <button  className="btn btn1">
+            <a  className="btn btn1" href="#about_star_lion">
             About us
               {/* <a href="#">About us</a> */}
-            </button>
+            </a>
             <button className="btn btn2">
             Academics
               {/* <a href="#">Academics</a> */}
             </button>
-            <button  className="btn btn1">
+            <a  className="btn btn1" href="#facilities_star_lions">
             Facilities
               {/* <a href="#">Facilities</a> */}
-            </button>
+            </a>
             <button className="btn btn2">
             Gallery
               {/* <a href="#">Gallery</a> */}

@@ -17,6 +17,7 @@ const iconStyle = { background: stringConstants.APP_COLOR, color: "#fff" }
 
 function Facilities() {
   return (
+    <div id="facilities_star_lions">
     <Grid container justify="center" spacing={4} style={{marginTop:"2%"}}>
 
     <Grid item>
@@ -118,7 +119,7 @@ function Facilities() {
       </VerticalTimeline>
     </Grid>
     </Grid>
-
+    </div>
   );
 }
 
