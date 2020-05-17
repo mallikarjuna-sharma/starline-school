@@ -18,12 +18,12 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   appBar: {
-    paddingLeft:"25%",
+    // paddingLeft:"25%",
     backgroundColor: "white",
     height: "10vh",
     [theme.breakpoints.down("md")]: {
       height: "5%",
-     paddingLeft:"5%",
+
     },
   },
 }));
@@ -44,9 +44,12 @@ function App() {
 
       <AppBar position="sticky" color="inherit" className={classes.appBar}>
         <Toolbar style={{ padding: 0 }}>
+
+
+
        
 
-          <ul>
+          <Grid container justify="center">
             <button  className="btn btn1">
             About us
               {/* <a href="#">About us</a> */}
@@ -67,7 +70,7 @@ function App() {
             Contact us
               {/* <a href="#">Contact us</a> */}
             </button>
-          </ul>
+          </Grid>
 
           {/* <Typography>
         Website Devlopment in Progress waiting for godaddy
