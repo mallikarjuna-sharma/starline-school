@@ -49,7 +49,7 @@ function App() {
 
        
 
-          <Grid container justify="center">
+          <Grid container justify="center" spacing={8}>
             <button  className="btn btn1">
             About us
               {/* <a href="#">About us</a> */}
