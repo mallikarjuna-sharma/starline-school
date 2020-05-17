@@ -42,7 +42,7 @@ function App() {
         {/* <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
             <MenuIcon />
           </IconButton> */}
-        <img src={Logo} style={{ height: "100%", width: "20%" }}></img>
+        <img src={Logo} style={{ height: "100%", width: "15%" }}></img>
 
         <ul>
           <li class="">

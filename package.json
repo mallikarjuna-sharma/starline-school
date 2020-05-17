@@ -32,7 +32,8 @@
     "react-router-dom": "^5.2.0",
     "react-slideshow-image": "^1.4.2",
     "react-vertical-timeline-component": "^2.6.2",
-    "style-loader": "^1.2.1"
+    "style-loader": "^1.2.1",
+    "url-loader": "^4.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",
