@@ -5,6 +5,7 @@ import Gallery from './Gallery';
 import AboutUsCard from './AboutUsCard';
 import { makeStyles } from "@material-ui/core/styles";
 import Facilities from './Facilities';
+import ContactUs from './ContactUs';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -38,6 +39,11 @@ function Dashboard() {
       <Grid item md={12} lg={12} >
         <Facilities/>
       </Grid>
+
+
+      {/* <Grid item md={12} lg={12} >
+        <ContactUs/>
+      </Grid> */}
      
     </Grid>
   );

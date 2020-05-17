@@ -75,6 +75,7 @@ a:focus::before {
   margin:0;
   border: none;
   outline:none;
+  text-decoration: none;
 }
 .btn1,.btn2{
   color: #499F56;
