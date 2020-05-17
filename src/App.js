@@ -1,15 +1,11 @@
-import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
+import { Grid, Toolbar } from "@material-ui/core";
 import AppBar from "@material-ui/core/AppBar";
-import Button from "@material-ui/core/Button";
-import IconButton from "@material-ui/core/IconButton";
-import MenuIcon from "@material-ui/icons/Menu";
-import Toolbar from "@material-ui/core/Toolbar";
+import { makeStyles } from "@material-ui/core/styles";
+import React from "react";
+import "./App.css";
 // import Logo from "./assests/StarLionSchoolLogo.jpg";
 import Logo from "./assests/logo_trans.png";
-
-import "./App.css";
-import Dashboard from './Dashboard'
+import Dashboard from "./Dashboard";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -21,55 +17,64 @@ const useStyles = makeStyles((theme) => ({
   title: {
     flexGrow: 1,
   },
-  appBar:{
+  appBar: {
+    paddingLeft:"25%",
     backgroundColor: "white",
-    height: "18vh" ,
-    [theme.breakpoints.down('md')]: {
-      height: "5%" 
+    height: "10vh",
+    [theme.breakpoints.down("md")]: {
+      height: "5%",
+     paddingLeft:"5%",
     },
-  }
+  },
 }));
 
 function App() {
   const classes = useStyles();
   return (
     <React.Fragment>
-    {/* <AppBar position="fixed" color="inherit" className={classes.appBar}> */}
-    <AppBar
-      position="fixed"
-      color="inherit"
-      className={classes.appBar}
-    >
-      <Toolbar style={{ padding: 0 }}>
-        {/* <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-            <MenuIcon />
-          </IconButton> */}
-        <img src={Logo} style={{ height: "100%", width: "15%" }}></img>
+      {/* <AppBar position="fixed" color="inherit" className={classes.appBar}> */}
+      <Grid container>
+        <Grid item>
+          <img
+            src={Logo}
+            style={{ height: "100%", width: "18%", paddingLeft: "40%" }}
+          ></img>
+        </Grid>
+      </Grid>
 
-        <ul>
-          <li class="">
-            <a href="#">About us</a>
-          </li>
-          <li class="">
-            <a href="#">Academics</a>
-          </li>
-          <li class="">
-            <a href="#">Facilities</a>
-          </li>
-          <li class="">
-            <a href="#">Gallery</a>
-          </li>
-          <li class="">
-            <a href="#">Contact us</a>
-          </li>
-        </ul>
+      <AppBar position="sticky" color="inherit" className={classes.appBar}>
+        <Toolbar style={{ padding: 0 }}>
+       
 
-        {/* <Typography>
+          <ul>
+            <button  className="btn btn1">
+            About us
+              {/* <a href="#">About us</a> */}
+            </button>
+            <button className="btn btn2">
+            Academics
+              {/* <a href="#">Academics</a> */}
+            </button>
+            <button  className="btn btn1">
+            Facilities
+              {/* <a href="#">Facilities</a> */}
+            </button>
+            <button className="btn btn2">
+            Gallery
+              {/* <a href="#">Gallery</a> */}
+            </button>
+            <button  className="btn btn1">
+            Contact us
+              {/* <a href="#">Contact us</a> */}
+            </button>
+          </ul>
+
+          {/* <Typography>
         Website Devlopment in Progress waiting for godaddy
         </Typography> */}
-      </Toolbar>
-    </AppBar>
-    <Dashboard/>
+        </Toolbar>
+      </AppBar>
+      <Dashboard />
     </React.Fragment>
   );
 }

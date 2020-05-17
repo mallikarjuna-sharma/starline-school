@@ -12,8 +12,8 @@ const useStyles = makeStyles((theme) => ({
   gallery:{
     padding:0,
     margin:0,
-    height:"85vh",
-    marginTop:"18vh",
+    height:"90vh",
+    marginTop:"1vh",
     [theme.breakpoints.down('md')]: {
       height:"90%",
       marginTop:"0vh",
