@@ -41,9 +41,9 @@ function Dashboard() {
       </Grid>
 
 
-      {/* <Grid item md={12} lg={12} >
+      <Grid item md={12} lg={12} style={{padding:0}}>
         <ContactUs/>
-      </Grid> */}
+      </Grid>
      
     </Grid>
   );
