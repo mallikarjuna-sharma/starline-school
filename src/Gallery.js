@@ -1,11 +1,11 @@
 import { Grid } from "@material-ui/core";
 import React from "react";
 import { Zoom } from "react-slideshow-image";
-import IMG1 from "./assests/_IBM1.jpg";
-import IMG2 from "./assests/_IBM2.jpg";
-import IMG3 from "./assests/_IBM3.jpg";
-import IMG4 from "./assests/_IBM4.jpg";
-import IMG5 from "./assests/_IBM5.jpg";
+import IMG1 from "./assests/_IBM1-min.jpg";
+import IMG2 from "./assests/_IBM2-min.jpg";
+import IMG3 from "./assests/_IBM3-min.jpg";
+import IMG4 from "./assests/_IBM4-min.jpg";
+import IMG5 from "./assests/_IBM5-min.jpg";
 import "./Gallery.css";
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -16,9 +16,9 @@ const useStyles = makeStyles((theme) => ({
   images:{
     width: "100%",
     height: "80vh",
-     paddingLeft:"2%" ,
     [theme.breakpoints.down('md')]: {
       height: "40vh",
+      width: "100%",
     },
   }
 }));
