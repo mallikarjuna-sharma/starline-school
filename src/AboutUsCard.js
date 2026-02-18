@@ -6,7 +6,6 @@ import Chairman from "./assests/Chairman.jpg";
 import Secretary from "./assests/Secretary.jpg";
 import Principal from "./assests/Principal.jpg";
 
-import VicePrincipal from "./assests/Vice-Principal.jpg";
 import FacultyAdminstrator from "./assests/Faculty_Adminstrator.jpg";
 
 const ImgStyle = {
@@ -131,27 +130,6 @@ function AboutUsCard() {
                     </Grid>
                     <Grid item md={12} lg={12} style={{ textAlign: "center" }}>
                       <Typography variant={"h6"}>Principal</Typography>
-                    </Grid>
-                  </Grid>
-                </Grid>
-
-                <Grid item>
-                  <Grid container spacing={1} direction="column">
-                    <Grid item md={12} lg={12}>
-                    <Grid container justify="center" >
-                      <Card raised style={CardStyles}>
-                        {" "}
-                        <img src={VicePrincipal} style={ImgStyle} />
-                      </Card>
-                      </Grid>
-                    </Grid>
-                    <Grid item style={{ textAlign: "center" }}>
-                      <Typography variant={"h5"}>
-                        Mr.A.Saravanan,M.A,M.Phil,M.Ed
-                      </Typography>
-                    </Grid>
-                    <Grid item style={{ textAlign: "center" }}>
-                      <Typography variant={"h6"}>Vice Principal</Typography>
                     </Grid>
                   </Grid>
                 </Grid>
