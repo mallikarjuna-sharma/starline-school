@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin, Youtube, Instagram, Facebook } from "lucide-react";
 import { Link } from "react-router-dom";
 import logoImg from "@/assets/logo.jpg";
 
@@ -11,7 +11,7 @@ const Footer = () => {
   return (
     <footer id="contact" className="bg-primary text-primary-foreground py-16">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-3 gap-10 mb-12">
+        <div className="grid md:grid-cols-4 gap-10 mb-12">
           <div>
             <div className="flex items-center gap-3 mb-4">
               <img src={logoImg} alt="Logo" className="h-10 object-contain" />
@@ -46,6 +46,35 @@ const Footer = () => {
               <button onClick={() => scrollTo("#facilities")} className="block text-primary-foreground/70 hover:text-primary-foreground transition-colors">Facilities</button>
               <Link to="/gallery" className="block text-primary-foreground/70 hover:text-primary-foreground transition-colors">Gallery</Link>
               <button onClick={() => scrollTo("#contact")} className="block text-primary-foreground/70 hover:text-primary-foreground transition-colors">Contact</button>
+            </div>
+          </div>
+          <div>
+            <h4 className="font-display font-bold text-lg mb-4">Follow Us</h4>
+            <div className="space-y-3 text-sm">
+              <a 
+                href="https://youtube.com/@starlionsschool?si=-xlfaFmm6DANnGeR" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="flex items-center gap-2 text-primary-foreground/70 hover:text-primary-foreground transition-colors"
+              >
+                <Youtube className="h-5 w-5" /> YouTube
+              </a>
+              <a 
+                href="https://www.instagram.com/starlionsschool?igsh=MTVvd2ljZ3JqOHp3ZQ==" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="flex items-center gap-2 text-primary-foreground/70 hover:text-primary-foreground transition-colors"
+              >
+                <Instagram className="h-5 w-5" /> Instagram
+              </a>
+              <a 
+                href="https://www.facebook.com/share/1BUfb8oUZ2/?mibextid=wwXIfr" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="flex items-center gap-2 text-primary-foreground/70 hover:text-primary-foreground transition-colors"
+              >
+                <Facebook className="h-5 w-5" /> Facebook
+              </a>
             </div>
           </div>
         </div>

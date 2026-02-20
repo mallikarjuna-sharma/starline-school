@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from "react";
-import { GraduationCap, Building, FlaskConical, Heart, Shield, Bus, Monitor, Users, Eye, Dumbbell, Music, BookOpen, Baby, ChevronLeft, ChevronRight } from "lucide-react";
+import { GraduationCap, Building, FlaskConical, Heart, Shield, Bus, Monitor, Users, Eye, Dumbbell, Music, BookOpen, Baby, ChevronLeft, ChevronRight, MapPin } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import Navbar from "@/components/Navbar";
@@ -231,6 +231,58 @@ Let us move forward with unity, dedication, and a shared vision of excellence.  
                 <source src="/marathon-video.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* LOCATION / CONTACT */}
+      <section id="contact" className="py-20 md:py-28">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-center text-primary mb-4">Our Location</h2>
+          <p className="text-center text-muted-foreground mb-2">Visit Us</p>
+          <div className="h-1 w-20 bg-secondary mx-auto mb-12 rounded-full" />
+          <div className="max-w-5xl mx-auto">
+            <Card className="border-none shadow-xl overflow-hidden bg-card">
+              <CardContent className="p-0">
+                <div className="relative w-full h-[500px] md:h-[600px]">
+                  <iframe
+                    src="https://www.google.com/maps?q=10.8961519,79.1852112&hl=en&z=17&output=embed"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    className="w-full h-full"
+                    title="Star Lions Matriculation Hr. Sec. School Location"
+                  />
+                </div>
+                <div className="p-6 bg-muted/30">
+                  <div className="flex items-start gap-4">
+                    <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-1">
+                      <MapPin className="h-5 w-5 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="font-display text-xl font-bold text-primary mb-2">Star Lions Matriculation Hr. Sec. School</h3>
+                      <p className="text-muted-foreground text-sm leading-relaxed mb-3">
+                        Find us at our campus location. We welcome visitors and are happy to provide directions.
+                      </p>
+                      <a
+                        href="https://www.google.com/maps/place/Star+Lions+Matriculation+Hr+Sec+School/@10.8961572,79.1826363,17z/data=!3m1!4b1!4m6!3m5!1s0x3baac5ec28866aa7:0xc5e0f001f1562fda!8m2!3d10.8961519!4d79.1852112!16s%2Fg%2F11cm16fm0s?entry=ttu&g_ep=EgoyMDI2MDIxNy4wIKXMDSoASAFQAw%3D%3D"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-secondary hover:text-secondary/80 font-medium text-sm inline-flex items-center gap-2 transition-colors"
+                      >
+                        Open in Google Maps
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
             </Card>
           </div>
         </div>
