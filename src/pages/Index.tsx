@@ -103,7 +103,17 @@ const Index = () => {
                 <h3 className="font-display text-xl font-bold text-primary mb-1">Mr. S. Thiruvengadam</h3>
                 <p className="text-secondary font-semibold text-sm mb-5 tracking-wide">Chairman</p>
                 <blockquote className="text-muted-foreground text-sm leading-relaxed italic border-l-4 border-secondary pl-4 text-left">
-                  "The highest intellectual achievements is the true actualization of thoughts. Our School is the platform where children get a chance to develop their faculties while preparing them to be kind souls. As children grow at Star Lions Matriculation Hr. Sec. School they follow the norms and guidelines laid down for them."
+                  "It gives me immense pride and heartfelt joy to share this message as we celebrate 50 glorious years of our beloved institution, SLMHSS. What began as a humble effort to provide quality education in a rural setting has today grown into a respected center of learning and character building.
+
+As a businessman, I strongly believe that true success is not measured only in profits, but in the positive impact we create in society. Education is the most powerful investment we can make for the future. With this vision, our school was established to ensure that children from rural backgrounds receive the same opportunities, exposure, and quality education as those in urban areas.
+
+Over the past five decades, our school has remained committed to academic excellence, discipline, and moral values. We strive to create an environment where students are encouraged to dream big, think independently, and develop the confidence to face global challenges while staying rooted in our cultural heritage.
+
+I extend my sincere gratitude to our dedicated teachers, supportive parents, hardworking students, and proud alumni who have contributed to this remarkable journey. Their commitment and trust have been the foundation of our success.
+
+As we move forward, we remain determined to upgrade our facilities, adopt modern teaching methodologies, and continue nurturing future leaders who will contribute meaningfully to society.
+
+Let us continue this journey together, building brighter futures and stronger communities."
                 </blockquote>
               </CardContent>
             </Card>
@@ -113,8 +123,17 @@ const Index = () => {
                 <h3 className="font-display text-xl font-bold text-primary mb-1">Mr. T. Krishna Prasath, B.Com., CA</h3>
                 <p className="text-secondary font-semibold text-sm mb-5 tracking-wide">Secretary</p>
                 <blockquote className="text-muted-foreground text-sm leading-relaxed italic border-l-4 border-secondary pl-4 text-left">
-                  "With advancement in the field of information technology, education today has acquired a new enchanting face. Schools are the training grounds for the future of this nation. Star Lions Matriculation Hr. Sec. School has continued to keep pace with the changing environment and has helped evolve intelligent, responsible and successful human beings."
-                </blockquote>
+                  With great pride and deep gratitude, I share this message as we celebrate 50 remarkable years of our esteemed institution, SLMHSS.
+
+As a second-generation member entrusted with the responsibility of carrying forward this noble legacy, I feel both honored and humbled. What was started five decades ago with a strong vision to provide quality education to rural children has today grown into a pillar of knowledge, discipline, and values in our community.
+
+Growing up witnessing the dedication and commitment behind this institution, I understand the hard work and sacrifice that built its foundation. Today, my mission is to preserve those core values while embracing modern advancements in education. We are committed to strengthening academic excellence, improving infrastructure, integrating technology in classrooms, and ensuring that our students are equipped to meet global standards without losing their cultural roots.
+
+Our rural background is not a limitation—it is our strength. We take pride in nurturing confident, capable, and compassionate individuals who go on to achieve success in various fields while remembering their origins.
+
+I extend my heartfelt thanks to our Chairman, management, teachers, parents, alumni, and students who continue to support and trust us. Together, we will build on this proud legacy and shape an even brighter future for generations to come.
+
+Let us move forward with unity, dedication, and a shared vision of excellence.                </blockquote>
               </CardContent>
             </Card>
           </div>
