@@ -23,16 +23,16 @@ const heroSlides = Object.entries(galleryImages)
   .map(([, src]) => src as string);
 
 const salientAspects = [
-  { icon: Heart, text: "Healthy and Hygienic Environment" },
-  { icon: Baby, text: "Education with a Mother's Touch" },
-  { icon: GraduationCap, text: "Highly Qualified, Experienced and Dedicated Faculty" },
-  { icon: Monitor, text: "Smart Class Facility & AC Classrooms for Pre-KG" },
-  { icon: BookOpen, text: "Age-appropriate Education for Every Student" },
-  { icon: Users, text: "Continuous Assessment & Parent Reporting" },
-  { icon: Dumbbell, text: "Well Developed Sports Facility" },
-  { icon: Music, text: "Co-curricular: Karate, Yoga, Music, Dance, Art & Craft" },
-  { icon: Eye, text: "Personal Care with CCTV Surveillance" },
-  { icon: Bus, text: "Van Facility for All Destinations at Low Cost" },
+  { icon: Heart, text: "Healthy and Hygienic Environment", color: "text-rose-500" },
+  { icon: Baby, text: "Education with a Mother's Touch", color: "text-pink-500" },
+  { icon: GraduationCap, text: "Highly Qualified, Experienced and Dedicated Faculty", color: "text-amber-500" },
+  { icon: Monitor, text: "Smart Class Facility & AC Classrooms for Pre-KG", color: "text-blue-500" },
+  { icon: BookOpen, text: "Age-appropriate Education for Every Student", color: "text-emerald-500" },
+  { icon: Users, text: "Continuous Assessment & Parent Reporting", color: "text-violet-500" },
+  { icon: Dumbbell, text: "Well Developed Sports Facility", color: "text-orange-500" },
+  { icon: Music, text: "Co-curricular: Karate, Yoga, Music, Dance, Art & Craft", color: "text-fuchsia-500" },
+  { icon: Eye, text: "Personal Care with CCTV Surveillance", color: "text-cyan-500" },
+  { icon: Bus, text: "Van Facility for All Destinations at Low Cost", color: "text-teal-500" },
 ];
 
 const Index = () => {
@@ -109,20 +109,26 @@ const Index = () => {
         </div>
       </section>
 
-      {/* STAR LIONS HISTORY */}
+      {/* ABOUT US */}
       <section id="history" className="py-20 md:py-28 bg-muted/30">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-center text-primary mb-4">Star Lions History</h2>
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-center text-primary mb-4">About Us</h2>
           <div className="h-1 w-20 bg-secondary mx-auto mb-12 rounded-full" />
           <div className="max-w-4xl mx-auto">
             <p className="text-muted-foreground text-center leading-relaxed mb-4">
-              Star Lions Matriculation Higher Secondary School (SLMHSS) was established with a noble vision to provide quality education to children in rural areas. What began as a humble effort decades ago has today grown into a respected center of learning and character building in the Thanjavur district.
+              Founded 50 years ago, SLMHSS has been a beacon of learning and empowerment in the heart of Ayyampettai Thanjavur(DT), Tamil Nadu. Established with the vision to bring quality education to rural children, our school has grown from humble beginnings into a trusted institution where tradition meets excellence.
             </p>
             <p className="text-muted-foreground text-center leading-relaxed mb-4">
-              Over the years, our school has remained committed to academic excellence, discipline, and moral values. We have nurtured thousands of students who have gone on to achieve success in various fields while staying rooted in our cultural heritage. Our sprawling 4.5 acre campus continues to be a beacon of hope and opportunity for generations of learners.
+              Over the past five decades, we have remained committed to nurturing young minds, fostering curiosity, and promoting holistic development. Our curriculum follows the Matriculation Board guidelines, emphasizing strong academic foundations while also encouraging extracurricular engagement in sports, arts, and cultural activities.
+            </p>
+            <p className="text-muted-foreground text-center leading-relaxed mb-4">
+              At SLMHSS, we believe that education goes beyond textbooks. Our dedicated faculty works tirelessly to instill values such as integrity, discipline, empathy, and respect. We strive to create a supportive and inclusive environment where every student can grow with confidence and pride.
+            </p>
+            <p className="text-muted-foreground text-center leading-relaxed mb-4">
+              As a rural school, we understand the unique challenges faced by our community. Yet, year after year, our students have risen to shine in academics, public examinations, and various competitions—testament to their hard work and the unwavering support of our teachers, parents, and alumni.
             </p>
             <p className="text-muted-foreground text-center leading-relaxed">
-              As we celebrate our journey, we remain dedicated to upgrading facilities, adopting modern teaching methodologies, and nurturing future leaders who will contribute meaningfully to society.
+              As we celebrate 50 remarkable years, we look forward to continuing our mission of transforming lives through learning, inspiring future generations to dream bigger and reach higher.
             </p>
           </div>
         </div>
@@ -245,12 +251,11 @@ const Index = () => {
           <div className="max-w-2xl mx-auto mb-12">
             <Card className="border-none shadow-lg bg-card overflow-hidden">
               <CardContent className="p-0">
-                <div className="aspect-video bg-muted relative flex items-center justify-center overflow-hidden">
-                  <img src="/van.jpg" alt=" " className="w-full h-full object-cover" onLoad={() => setVanImageLoaded(true)} onError={() => setVanImageLoaded(false)} />
+                <div className="bg-muted relative flex items-center justify-center overflow-hidden">
+                  <img src="/van.jpeg" alt="School Van - Transport Facility" className="w-full h-auto block" onLoad={() => setVanImageLoaded(true)} onError={() => setVanImageLoaded(false)} />
                   {!vanImageLoaded && (
-                  <div className="absolute inset-0 flex flex-col items-center justify-center text-muted-foreground p-6 bg-muted/80">
+                  <div className="absolute inset-0 flex flex-col items-center justify-center text-muted-foreground p-6 bg-muted/80 min-h-[300px]">
                     <Bus className="h-16 w-16 mb-4 opacity-50" />
-                    {/* <p className="text-sm text-center">Van photo coming soon. Add your van image as <code className="bg-background/80 px-2 py-1 rounded mt-2">public/van.jpg</code></p> */}
                   </div>
                   )}
                 </div>
@@ -267,8 +272,8 @@ const Index = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 max-w-5xl mx-auto">
             {salientAspects.map((item, i) => (
               <div key={i} className="flex flex-col items-center text-center p-5 rounded-xl bg-card shadow-md hover:shadow-lg transition-shadow">
-                <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-3">
-                  <item.icon className="h-5 w-5 text-primary" />
+                <div className="h-12 w-12 rounded-full bg-primary/5 flex items-center justify-center mb-3">
+                  <item.icon className={`h-6 w-6 ${item.color}`} />
                 </div>
                 <p className="text-xs font-medium text-muted-foreground leading-snug">{item.text}</p>
               </div>
@@ -309,15 +314,26 @@ const Index = () => {
       <section id="events" className="py-20 md:py-28 bg-muted/50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-display font-bold text-center text-primary mb-4">School Events</h2>
-          <p className="text-center text-secondary font-display text-lg mb-4">Marathon</p>
           <div className="h-1 w-20 bg-secondary mx-auto mb-12 rounded-full" />
-          <div className="max-w-3xl mx-auto">
-            <Card className="border-none shadow-xl overflow-hidden bg-card">
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <div>
+              <p className="text-center text-secondary font-display text-lg mb-4">Marathon</p>
+              <Card className="border-none shadow-xl overflow-hidden bg-card">
+                <video controls className="w-full aspect-video" poster={logoImg}>
+                  <source src="/marathon-video.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </Card>
+            </div>
+            <div>
+              <p className="text-center text-secondary font-display text-lg mb-4">Cultural</p>
+              <Card className="border-none shadow-xl overflow-hidden bg-card">
               <video controls className="w-full aspect-video" poster={logoImg}>
-                <source src="/marathon-video.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            </Card>
+                  <source src="/cultural.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </Card>
+            </div>
           </div>
         </div>
       </section>
