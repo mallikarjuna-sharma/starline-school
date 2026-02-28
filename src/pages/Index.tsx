@@ -1,10 +1,11 @@
 import { useState, useEffect, useCallback } from "react";
-import { GraduationCap, Building, FlaskConical, Heart, Shield, Bus, Monitor, Users, Eye, Dumbbell, Music, BookOpen, Baby, ChevronLeft, ChevronRight, MapPin } from "lucide-react";
+import { GraduationCap, Building, FlaskConical, Heart, Shield, Bus, Monitor, Users, Eye, Dumbbell, Music, BookOpen, Baby, ChevronLeft, ChevronRight, MapPin, Music2, Footprints, Move, Gamepad2, LayoutGrid, Swords, Trophy, Piano, Flower2 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import logoImg from "@/assets/logo.png";
+// Replace chairman.jpg and secretary.jpg in src/assets/ with new photos when ready
 import chairmanImg from "@/assets/chairman.jpg";
 import secretaryImg from "@/assets/secretary.jpg";
 
@@ -36,6 +37,7 @@ const salientAspects = [
 
 const Index = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [vanImageLoaded, setVanImageLoaded] = useState(false);
 
   const nextSlide = useCallback(() => {
     setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
@@ -50,49 +52,110 @@ const Index = () => {
     return () => clearInterval(interval);
   }, [nextSlide]);
 
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash) {
+      setTimeout(() => document.querySelector(hash)?.scrollIntoView({ behavior: "smooth" }), 100);
+    }
+  }, []);
+
 
   return (
     <div className="min-h-screen bg-background text-foreground font-body">
       <Navbar />
 
-      {/* HERO CAROUSEL */}
-      <section id="home" className="relative h-screen overflow-hidden">
-        {heroSlides.map((slide, i) => (
-          <div
-            key={i}
-            className={`absolute inset-0 transition-opacity duration-1000 ${i === currentSlide ? "opacity-100" : "opacity-0"}`}
-          >
-            <img
-              src={slide}
-              alt={`School Event ${i + 1}`}
-              className="w-full h-full object-cover object-center"
-              style={{ objectFit: "cover" }}
-            />
-          </div>
-        ))}
+      {/* Admissions Open Banner */}
+      <div className="bg-primary text-primary-foreground py-3 text-center mt-20 md:mt-24">
+        <p className="font-display font-bold text-lg md:text-xl">
+          Admissions Open for 2026 - 2027
+        </p>
+        <p className="text-sm text-primary-foreground/90 mt-1">Enroll now for the new academic year</p>
+      </div>
 
-        {/* Carousel controls */}
-        <button onClick={prevSlide} className="absolute left-4 top-1/2 -translate-y-1/2 z-20 h-10 w-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-white/40 transition">
-          <ChevronLeft className="h-5 w-5" />
-        </button>
-        <button onClick={nextSlide} className="absolute right-4 top-1/2 -translate-y-1/2 z-20 h-10 w-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-white/40 transition">
-          <ChevronRight className="h-5 w-5" />
-        </button>
-
-        {/* Dots */}
-        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex gap-2">
-          {heroSlides.map((_, i) => (
-            <button
+      {/* HERO CAROUSEL - Full Screen Width */}
+      <section id="home" className="relative w-full h-screen overflow-hidden">
+        <div className="absolute inset-0 w-full">
+          {heroSlides.map((slide, i) => (
+            <div
               key={i}
-              onClick={() => setCurrentSlide(i)}
-              className={`h-2.5 rounded-full transition-all ${i === currentSlide ? "w-8 bg-secondary" : "w-2.5 bg-white/50"}`}
-            />
+              className={`absolute inset-0 transition-opacity duration-1000 ${i === currentSlide ? "opacity-100" : "opacity-0"}`}
+            >
+              <img
+                src={slide}
+                alt={`School Event ${i + 1}`}
+                className="w-full h-full object-cover object-center"
+              />
+            </div>
           ))}
+
+          {/* Carousel controls */}
+          <button onClick={prevSlide} className="absolute left-4 top-1/2 -translate-y-1/2 z-20 h-10 w-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-white/40 transition">
+            <ChevronLeft className="h-5 w-5" />
+          </button>
+          <button onClick={nextSlide} className="absolute right-4 top-1/2 -translate-y-1/2 z-20 h-10 w-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-white/40 transition">
+            <ChevronRight className="h-5 w-5" />
+          </button>
+
+          {/* Dots */}
+          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 flex gap-2">
+            {heroSlides.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setCurrentSlide(i)}
+                className={`h-2.5 rounded-full transition-all ${i === currentSlide ? "w-8 bg-secondary" : "w-2.5 bg-white/50"}`}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* STAR LIONS HISTORY */}
+      <section id="history" className="py-20 md:py-28 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-center text-primary mb-4">Star Lions History</h2>
+          <div className="h-1 w-20 bg-secondary mx-auto mb-12 rounded-full" />
+          <div className="max-w-4xl mx-auto">
+            <p className="text-muted-foreground text-center leading-relaxed mb-4">
+              Star Lions Matriculation Higher Secondary School (SLMHSS) was established with a noble vision to provide quality education to children in rural areas. What began as a humble effort decades ago has today grown into a respected center of learning and character building in the Thanjavur district.
+            </p>
+            <p className="text-muted-foreground text-center leading-relaxed mb-4">
+              Over the years, our school has remained committed to academic excellence, discipline, and moral values. We have nurtured thousands of students who have gone on to achieve success in various fields while staying rooted in our cultural heritage. Our sprawling 4.5 acre campus continues to be a beacon of hope and opportunity for generations of learners.
+            </p>
+            <p className="text-muted-foreground text-center leading-relaxed">
+              As we celebrate our journey, we remain dedicated to upgrading facilities, adopting modern teaching methodologies, and nurturing future leaders who will contribute meaningfully to society.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* VISION & MISSION */}
+      <section id="vision-mission" className="py-20 md:py-28">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-center text-primary mb-4">Vision & Mission</h2>
+          <div className="h-1 w-20 bg-secondary mx-auto mb-12 rounded-full" />
+          <div className="grid md:grid-cols-2 gap-10 max-w-4xl mx-auto">
+            <Card className="border-none shadow-xl bg-card">
+              <CardContent className="p-8">
+                <h3 className="font-display text-xl font-bold text-primary mb-4">Our Vision</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  To be a leading institution that nurtures holistic development, academic excellence, and strong moral values. We envision creating confident, compassionate individuals who contribute meaningfully to society while staying rooted in our cultural heritage.
+                </p>
+              </CardContent>
+            </Card>
+            <Card className="border-none shadow-xl bg-card">
+              <CardContent className="p-8">
+                <h3 className="font-display text-xl font-bold text-primary mb-4">Our Mission</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  To provide quality education in a caring environment, ensuring every child receives equal opportunities regardless of background. We are committed to excellence in character, academics, and co-curricular activities through dedicated faculty and modern facilities.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </section>
 
       {/* ABOUT / LEADERSHIP */}
-      <section id="about" className="py-20 md:py-28">
+      <section id="about" className="py-20 md:py-28 bg-muted/30">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-display font-bold text-center text-primary mb-4">Our Leadership</h2>
           <div className="h-1 w-20 bg-secondary mx-auto mb-16 rounded-full" />
@@ -103,17 +166,7 @@ const Index = () => {
                 <h3 className="font-display text-xl font-bold text-primary mb-1">Mr. S. Thiruvengadam</h3>
                 <p className="text-secondary font-semibold text-sm mb-5 tracking-wide">Chairman</p>
                 <blockquote className="text-muted-foreground text-sm leading-relaxed italic border-l-4 border-secondary pl-4 text-left">
-                  "It gives me immense pride and heartfelt joy to share this message as we celebrate 50 glorious years of our beloved institution, SLMHSS. What began as a humble effort to provide quality education in a rural setting has today grown into a respected center of learning and character building.
-
-As a businessman, I strongly believe that true success is not measured only in profits, but in the positive impact we create in society. Education is the most powerful investment we can make for the future. With this vision, our school was established to ensure that children from rural backgrounds receive the same opportunities, exposure, and quality education as those in urban areas.
-
-Over the past five decades, our school has remained committed to academic excellence, discipline, and moral values. We strive to create an environment where students are encouraged to dream big, think independently, and develop the confidence to face global challenges while staying rooted in our cultural heritage.
-
-I extend my sincere gratitude to our dedicated teachers, supportive parents, hardworking students, and proud alumni who have contributed to this remarkable journey. Their commitment and trust have been the foundation of our success.
-
-As we move forward, we remain determined to upgrade our facilities, adopt modern teaching methodologies, and continue nurturing future leaders who will contribute meaningfully to society.
-
-Let us continue this journey together, building brighter futures and stronger communities."
+                  "It gives me immense pride and heartfelt joy to share this message as we celebrate 50 glorious years of our beloved institution, SLMHSS. What began as a humble effort to provide quality education in a rural setting has today grown into a respected center of learning and character building. As a businessman, I believe true success is measured by the positive impact we create in society. Education is the most powerful investment for the future. I extend my sincere gratitude to our dedicated teachers, supportive parents, and hardworking students. Let us continue this journey together, building brighter futures and stronger communities."
                 </blockquote>
               </CardContent>
             </Card>
@@ -123,17 +176,8 @@ Let us continue this journey together, building brighter futures and stronger co
                 <h3 className="font-display text-xl font-bold text-primary mb-1">Mr. T. Krishna Prasath, B.Com., CA</h3>
                 <p className="text-secondary font-semibold text-sm mb-5 tracking-wide">Secretary</p>
                 <blockquote className="text-muted-foreground text-sm leading-relaxed italic border-l-4 border-secondary pl-4 text-left">
-                  With great pride and deep gratitude, I share this message as we celebrate 50 remarkable years of our esteemed institution, SLMHSS.
-
-As a second-generation member entrusted with the responsibility of carrying forward this noble legacy, I feel both honored and humbled. What was started five decades ago with a strong vision to provide quality education to rural children has today grown into a pillar of knowledge, discipline, and values in our community.
-
-Growing up witnessing the dedication and commitment behind this institution, I understand the hard work and sacrifice that built its foundation. Today, my mission is to preserve those core values while embracing modern advancements in education. We are committed to strengthening academic excellence, improving infrastructure, integrating technology in classrooms, and ensuring that our students are equipped to meet global standards without losing their cultural roots.
-
-Our rural background is not a limitation—it is our strength. We take pride in nurturing confident, capable, and compassionate individuals who go on to achieve success in various fields while remembering their origins.
-
-I extend my heartfelt thanks to our Chairman, management, teachers, parents, alumni, and students who continue to support and trust us. Together, we will build on this proud legacy and shape an even brighter future for generations to come.
-
-Let us move forward with unity, dedication, and a shared vision of excellence.                </blockquote>
+                  With great pride and deep gratitude, I share this message as we celebrate 50 remarkable years of our esteemed institution, SLMHSS. As a second-generation member, I feel honored to carry forward this noble legacy. My mission is to preserve our core values while embracing modern advancements in education. We are committed to strengthening academic excellence, improving infrastructure, and ensuring our students meet global standards without losing their cultural roots. I extend my heartfelt thanks to our Chairman, teachers, parents, and students. Let us move forward with unity and a shared vision of excellence.
+                </blockquote>
               </CardContent>
             </Card>
           </div>
@@ -174,6 +218,48 @@ Let us move forward with unity, dedication, and a shared vision of excellence.  
                 <p className="text-muted-foreground text-sm leading-relaxed">
                   Star Lions has separate and modern Laboratories for Biology, Physics and Chemistry with the best equipment and able staff. Our school has installed a computer system lab that is radically prospective. Computers are a compulsory part of the curriculum.
                 </p>
+              </CardContent>
+            </Card>
+          </div>
+          <h3 className="font-display text-2xl font-bold text-center text-primary mb-6">Extra Curricular Activities</h3>
+          <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-4 gap-4 max-w-4xl mx-auto mb-12">
+            {[
+              { icon: Footprints, text: "Bharatham" },
+              { icon: Move, text: "Western Dance" },
+              { icon: Gamepad2, text: "Chess" },
+              { icon: Swords, text: "Silambam" },
+              { icon: Trophy, text: "Karate" },
+              { icon: LayoutGrid, text: "Carrom" },
+              { icon: Piano, text: "Keyboard" },
+              { icon: Flower2, text: "Yoga" },
+            ].map((item, i) => (
+              <div key={i} className="flex flex-col items-center text-center p-5 rounded-xl bg-card shadow-md hover:shadow-lg transition-shadow">
+                <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-3">
+                  <item.icon className="h-5 w-5 text-primary" />
+                </div>
+                <p className="text-xs font-medium text-muted-foreground leading-snug">{item.text}</p>
+              </div>
+            ))}
+          </div>
+          <h3 className="font-display text-2xl font-bold text-center text-primary mb-6">Transport Facility</h3>
+          <div className="max-w-2xl mx-auto mb-12">
+            <Card className="border-none shadow-lg bg-card overflow-hidden">
+              <CardContent className="p-0">
+                <div className="aspect-video bg-muted relative flex items-center justify-center overflow-hidden">
+                  <img src="/van.jpg" alt=" " className="w-full h-full object-cover" onLoad={() => setVanImageLoaded(true)} onError={() => setVanImageLoaded(false)} />
+                  {!vanImageLoaded && (
+                  <div className="absolute inset-0 flex flex-col items-center justify-center text-muted-foreground p-6 bg-muted/80">
+                    <Bus className="h-16 w-16 mb-4 opacity-50" />
+                    {/* <p className="text-sm text-center">Van photo coming soon. Add your van image as <code className="bg-background/80 px-2 py-1 rounded mt-2">public/van.jpg</code></p> */}
+                  </div>
+                  )}
+                </div>
+                <div className="p-6">
+                  <h4 className="font-display font-bold text-primary mb-2">Safe & Convenient Transport</h4>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    We provide van facility for all destinations at low cost. Our transport service ensures safe and timely pickup and drop for students across the area.
+                  </p>
+                </div>
               </CardContent>
             </Card>
           </div>
@@ -238,53 +324,51 @@ Let us move forward with unity, dedication, and a shared vision of excellence.  
 
       {/* LOCATION / CONTACT */}
       <section id="contact" className="py-20 md:py-28">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 mb-12">
           <h2 className="text-3xl md:text-4xl font-display font-bold text-center text-primary mb-4">Our Location</h2>
           <p className="text-center text-muted-foreground mb-2">Visit Us</p>
           <div className="h-1 w-20 bg-secondary mx-auto mb-12 rounded-full" />
-          <div className="max-w-5xl mx-auto">
-            <Card className="border-none shadow-xl overflow-hidden bg-card">
-              <CardContent className="p-0">
-                <div className="relative w-full h-[500px] md:h-[600px]">
-                  <iframe
-                    src="https://www.google.com/maps?q=10.8961519,79.1852112&hl=en&z=17&output=embed"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
-                    allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    className="w-full h-full"
-                    title="Star Lions Matriculation Hr. Sec. School Location"
-                  />
+        </div>
+        <div className="w-full h-[500px] md:h-[600px]">
+          <iframe
+            src="https://www.google.com/maps?q=10.8961519,79.1852112&hl=en&z=17&output=embed"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            className="w-full h-full block"
+            title="Star Lions Matriculation Hr. Sec. School Location"
+          />
+        </div>
+        <div className="container mx-auto px-4 mt-6">
+          <Card className="border-none shadow-xl overflow-hidden bg-card">
+            <CardContent className="p-6 bg-muted/30">
+              <div className="flex items-start gap-4">
+                <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-1">
+                  <MapPin className="h-5 w-5 text-primary" />
                 </div>
-                <div className="p-6 bg-muted/30">
-                  <div className="flex items-start gap-4">
-                    <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-1">
-                      <MapPin className="h-5 w-5 text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="font-display text-xl font-bold text-primary mb-2">Star Lions Matriculation Hr. Sec. School</h3>
-                      <p className="text-muted-foreground text-sm leading-relaxed mb-3">
-                        Find us at our campus location. We welcome visitors and are happy to provide directions.
-                      </p>
-                      <a
-                        href="https://www.google.com/maps/place/Star+Lions+Matriculation+Hr+Sec+School/@10.8961572,79.1826363,17z/data=!3m1!4b1!4m6!3m5!1s0x3baac5ec28866aa7:0xc5e0f001f1562fda!8m2!3d10.8961519!4d79.1852112!16s%2Fg%2F11cm16fm0s?entry=ttu&g_ep=EgoyMDI2MDIxNy4wIKXMDSoASAFQAw%3D%3D"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-secondary hover:text-secondary/80 font-medium text-sm inline-flex items-center gap-2 transition-colors"
-                      >
-                        Open in Google Maps
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
+                <div>
+                  <h3 className="font-display text-xl font-bold text-primary mb-2">Star Lions Matriculation Hr. Sec. School</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-3">
+                    Find us at our campus location. We welcome visitors and are happy to provide directions.
+                  </p>
+                  <a
+                    href="https://www.google.com/maps/place/Star+Lions+Matriculation+Hr+Sec+School/@10.8961572,79.1826363,17z/data=!3m1!4b1!4m6!3m5!1s0x3baac5ec28866aa7:0xc5e0f001f1562fda!8m2!3d10.8961519!4d79.1852112!16s%2Fg%2F11cm16fm0s?entry=ttu&g_ep=EgoyMDI2MDIxNy4wIKXMDSoASAFQAw%3D%3D"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-secondary hover:text-secondary/80 font-medium text-sm inline-flex items-center gap-2 transition-colors"
+                  >
+                    Open in Google Maps
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </a>
                 </div>
-              </CardContent>
-            </Card>
-          </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </section>
 

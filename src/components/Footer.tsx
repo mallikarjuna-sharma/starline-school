@@ -1,11 +1,17 @@
-import { Phone, Mail, MapPin, Youtube, Instagram, Facebook } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Phone, Mail, MapPin, Youtube, Instagram, Facebook, Clock } from "lucide-react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import logoImg from "@/assets/logo.jpg";
 
 const Footer = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+
   const scrollTo = (href: string) => {
-    const el = document.querySelector(href);
-    el?.scrollIntoView({ behavior: "smooth" });
+    if (location.pathname !== "/") {
+      navigate("/" + href);
+    } else {
+      document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
@@ -42,6 +48,8 @@ const Footer = () => {
             <h4 className="font-display font-bold text-lg mb-4">Quick Links</h4>
             <div className="space-y-2 text-sm">
               <button onClick={() => scrollTo("#home")} className="block text-primary-foreground/70 hover:text-primary-foreground transition-colors">Home</button>
+              <button onClick={() => scrollTo("#history")} className="block text-primary-foreground/70 hover:text-primary-foreground transition-colors">History</button>
+              <button onClick={() => scrollTo("#vision-mission")} className="block text-primary-foreground/70 hover:text-primary-foreground transition-colors">Vision & Mission</button>
               <button onClick={() => scrollTo("#about")} className="block text-primary-foreground/70 hover:text-primary-foreground transition-colors">About</button>
               <button onClick={() => scrollTo("#facilities")} className="block text-primary-foreground/70 hover:text-primary-foreground transition-colors">Facilities</button>
               <Link to="/gallery" className="block text-primary-foreground/70 hover:text-primary-foreground transition-colors">Gallery</Link>
@@ -75,6 +83,15 @@ const Footer = () => {
               >
                 <Facebook className="h-5 w-5" /> Facebook
               </a>
+            </div>
+          </div>
+        </div>
+        <div className="border-t border-primary-foreground/20 pt-6 mb-6">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 text-sm">
+            <div className="flex items-center gap-2">
+              <Clock className="h-5 w-5 text-secondary" />
+              <span className="font-display font-bold">School Working Hours:</span>
+              <span className="text-primary-foreground/80">Mon-Fri 8:00 AM - 4:00 PM | Sat 8:00 AM - 12:00 PM</span>
             </div>
           </div>
         </div>
